@@ -1,0 +1,313 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200&display=swap');
+
+:root
+{
+    --border-color:burlywood;
+    --background:burlywood;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif ;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*header*/
+header{
+    position:relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: solid;
+    height: 100px;
+    align-items: center;
+    background:linear-gradient(to left , lightblue , grey);
+    padding: 0 8px;
+}
+header h1{
+    font-size: 50px;
+    color: burlywood;
+    padding: 0 8px;
+}
+
+nav{
+    display: flex;
+    gap: 15px;
+}
+
+ .navbar a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: oldlace;
+  padding: 5px 10px;
+  border-radius: 99px;
+  transition: 0.4s;
+}
+.navbar a:hover{
+    background-color: burlywood;
+}
+.navbar a.active{
+    background: burlywood;
+}
+.navbar:hover > a:not(:hover){
+    background: none;
+}
+/*main*/
+img{
+    object-fit: cover;
+}
+
+main{ 
+    margin-top: 1px;
+    border: solid 20px burlywood;
+    display: flex;
+    border-width: 100%;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    justify-content:flex-start;
+    height: calc(100vh - 80px);
+    padding: 0 10px;
+}
+main .left{
+    width: 600px;
+    height: 190px;
+}
+main .left h2{
+    width: 700px;
+    font-size: 35px;
+    padding: 10px 10px;
+    color: rgb(184, 123, 45);
+    font-weight: 700;
+}
+.absp{
+    background: linear-gradient(to right,  lightblue , grey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 8px;
+}
+ .left p{
+    width: 580px;
+    border: solid 2px burlywood;
+    border-radius: 94px;
+    padding: 8px 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+
+.maincontent span.buy{
+    position: relative;
+    left: -700px;
+    top: 230px;
+    display: flex;
+    width: 100px;
+    height: 25px;
+    justify-content: center;
+    background: burlywood;
+    border-radius: 99px;
+    cursor: pointer;
+}
+.maincontent span.buy:hover{
+    background: black;
+    color: whitesmoke;
+    transform: scale(1.1);
+    transition:0.4s ease-in-out;
+}
+main .dp {
+    justify-content: flex-end;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 200px;
+    gap: 10px;
+    top: 10px;
+    right:15px;
+}
+main .dp img{
+    width: 100px;
+    height: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: transparent;
+    transition: 0.3s ease-in-out;
+}
+main .dp img:hover{
+    transform: scale(1.2);
+    /* transition: 0.3s ease-in-out; */
+}
+.form-box{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    top: 25%;
+}
+.form-box .form-group{
+    display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     position: relative;
+     width: 80%;
+     height: 50px;
+     margin: 15px 0;
+    }
+    .form-group input{
+        height: 100%;
+        width: 250%;
+        position: absolute;
+        border-radius: 10px;
+        padding: 0 20px;
+        font-size: 13px;
+        font-weight: 500;
+        outline: none;
+        border: 1px solid black;
+    }
+
+    .form-group label{
+        position: absolute;
+        pointer-events: none;/*what is pointer event*/
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        background: #fff;
+        transition: all 0.3s ease;
+        font-size: 17px;
+        font-weight: 500;
+        padding: 3px;
+        color: #999;
+    }
+    .form-group input:focus ~ label,
+    .form-group input:valid ~ label{
+        color: black;
+        top: 0%;
+        transform: translateY(-50%) scale(0.85);
+    }
+   .form button{
+        background: black;
+        width: 150px;
+        padding: 5px;
+        color: white;
+        border: none;
+        border-radius: 99px;
+        cursor:pointer;
+        transition: all 0.5s ease-in-out;
+    }
+    .form button:hover{
+        transform: scale(1.2);
+    }
+
+.scroll{
+    background: black;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    max-width: 100%;
+    transition: all 0.2s ease-in-out;
+    transform: translate(3rem, 0);
+    margin-left: -3rem;
+}
+.scroll h3{
+    width: 100px;
+    font-weight: 800;
+    color: white;
+}
+ .scrollimgaes img{
+    width: 8rem;
+    height:10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 5px solid burlywood ;
+    transition: all  0.2s ease-in-out;
+    cursor: pointer;
+}
+.scrollimgaes img:nth-child(2) {
+    transform: translate(-6.25rem, 0);
+}
+.scrollimgaes img:nth-child(3) {
+    transform: translate(-12.5rem, 0);
+}
+.scrollimgaes img:nth-child(4) {
+    transform: translate(-18.75rem, 0);
+}
+.scrollimgaes img:nth-child(5) {
+    transform: translate(-22.65rem, 0);
+}
+.scrollimgaes img:nth-child(6) {
+    transform: translate(-26.75rem, 0);
+}
+.scrollimgaes img:nth-child(7) {
+    transform: translate(-32.85rem, 0);
+}
+.scrollimgaes img:nth-child(8) {
+    transform: translate(-37.85rem, 0);
+}
+.scrollimgaes img:nth-child(9) {
+    transform: translate(-43.75rem, 0);
+}
+.scrollimgaes img:hover:not(:nth-last-child(1)){
+    margin-right: 110px;
+}
+.myartists{
+    display: flex;
+    width:100%;
+    border: solid 2px burlywood;
+    border-left: none;
+    border-right: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    justify-content: space-evenly;
+}
+.amazingartists{
+    width: 20%;
+    border-right: var(--border-color) solid 2px;
+    height: auto;
+    padding: 5px 10px;
+}
+.amazingartists p {
+    width: 100%;
+    height: auto;
+    text-align: start;
+    margin-left: -20px;
+    padding: 2px 10px;
+}
+.amazingartists button{
+    background: var(--background);
+    width: 40%;
+    height: 10%;
+    border: transparent;
+    border-radius: 99px;
+}
+.amazingartists button:hover{
+    color: white;
+    background: black;
+    transition: 0.3s ease-in ;
+    cursor: pointer;
+}
+.lia{
+    position: absolute;
+    background: linear-gradient(to right,  lightblue , grey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    width: 32%;
+    right: 15%;
+    justify-content: flex-end;
+    text-transform: uppercase;
+} 
+
