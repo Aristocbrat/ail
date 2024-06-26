@@ -59,9 +59,9 @@ nav{
     background: none;
 }
 /*main*/
-img{
+/* img{
     object-fit: cover;
-}
+} */
 
 main{ 
     margin-top: 1px;
@@ -138,6 +138,7 @@ main .dp img{
     height: 150px;
     border-radius: 20px;
     cursor: pointer;
+    object-fit: cover;
     border: transparent;
     transition: 0.3s ease-in-out;
 }
@@ -311,3 +312,260 @@ main .dp img:hover{
     text-transform: uppercase;
 } 
 
+section{
+    background-color: black;
+}
+.socials ul{
+    list-style: none;
+}
+.socials a{
+    text-decoration: none;
+}
+.site{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 13vh;
+}
+
+.share{
+    position: relative;
+    width: 300px;
+    height: auto;
+}
+.share input{
+    display: none;
+}
+.share label{
+    position: absolute;
+    font-size: 1.5em;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to right, lightblue,violet);
+    box-shadow:lightblue -1px -2px -1px 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    z-index: 10;
+    top: 13px;
+    left: 46%;
+
+    transition: opacity .3s , transform .3s , box-shadow 1s;/* note this*/
+    transition-timing-function:cubic-bezier(0.68, -0.55, 0.265, 1.55) ;/*learn more about cubic beizer*/
+
+}/* this is for the share logo */
+
+
+.share ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 25px;
+    margin: auto;
+    border-radius: 40px;
+    background-color:black;
+    color: white;
+    width: 100px;
+    opacity: 0;
+    transition: width .4s, opacity .3s;
+}
+.share input:checked ~ ul {
+     width: 360px;
+     opacity: 1;
+     transition: width .3s 1s, opacity .2s 1s;
+}/* this transforms the list*/
+
+.share input:checked ~ ul li{
+    transform: translateX(0);
+}
+
+.share input:checked ~ label {
+    opacity: 0;
+    transform: scale(.8);
+    box-shadow: 0 0 0 30px rgb(0 0 0 /10%);
+    transition: opacity .2s 1s, transform 2s , box-shadow 1s;
+}/* this is to transform the share icon and when clicked it should make a box shadow more visible*/
+
+.share ul li a{
+    font-size: 20px;
+    width: 46px;
+    height: 46px;
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    transition: transform .3s;/* */
+}/* this is for the links as a collective*/
+
+
+.share ul li:where(:nth-child(1),:nth-child(2)){
+    transform: translateX(80px);
+}/* learn more about this */
+
+.share ul li:where(:nth-child(4),:nth-child(5)){
+    transform: translateX(-80px);
+}/* learn more about this */
+
+.share ul li{
+    transition: transform .3s 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.share ul li.twitter a{
+    background-color: black ;
+    box-shadow: black 0 15px 18px -8px;
+}
+.share ul li.facebook a{
+    background-color: blue;
+    box-shadow: blue 0  15px 18px -8px ;
+}
+.share ul li.instagram a{
+    background-color:purple;
+    box-shadow: purple 0 15px 18px -8px;
+}
+.share ul li.reddit a{
+    background-color: rgb(207, 17, 17);
+    box-shadow: rgb(202, 12, 12) 0  15px 18px -8px;
+}
+.share ul li.whatsapp a{
+    background-color: rgb(155, 240, 28);
+    box-shadow: rgb(49, 219, 49) 0 15px 18px -8px;    
+}
+.share ul li a:hover{
+    transform: translateY(-10px);/* this is to make the item being clicked to move up*/
+}
+.share ul li a i{
+    transition: transform .5s;
+}
+.share ul li a:hover i{
+    transform: rotate(360deg);/* this is how to use rotate property*/
+}
+
+
+@media (min-width:350px) and (max-width:992px) {
+    header,.navbar a{
+        width: 100%;
+    }
+    header h1, .navbar a{
+        font-size: 12px;
+        padding: 5px 9px;
+    }
+    .navbar a{
+        font-size: 10px;
+        padding: 4px 5px; 
+    }
+    .maincontent{
+        width: 100%;
+    }
+    main .left h2 {
+        font-size: 16px;
+        width: 80%;
+        position: absolute;
+        height: 50px;
+        padding: px 10px;
+        margin-left: 35px;
+        /* background: red;   */
+    }
+    .left p{
+        width: 90%;
+        font-size: 10px;
+        margin-top: 70px;
+        left: 5%;
+        position: absolute;
+        /* background: green; */
+    }
+    main .dp{
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        margin-top:260px ;
+        margin-left: -5%;
+        justify-content: center;
+        width: 90%;
+        height: 220px;
+        /* background: black; */
+    }
+    main .dp img{
+        margin-left: 10px;
+        /* padding-bottom:  20px; */
+        width: 20%;
+        height: 100px;
+    }
+    .form-box{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 155px;
+        position: absolute;
+    }
+    .myartists{
+        position: absolute;
+        margin-top: 170px;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 900px;
+        /* background: red; */
+    }
+    .amazingartists{
+        width: 100%;
+        height: 170px;
+    }
+    .mycontainerheader1{
+        padding: 10px 0;
+        width: 100%;
+        display:flex ;
+        justify-content: center;
+    }
+    .amazingartists p{
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+        display: flex;
+    }
+    .amazingartists button{
+        width: 40%;
+        margin: auto;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .scroll{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 300px;
+        margin-top: 1120px;
+    }
+    .scroll h3{
+        display: none;
+    }
+    .scrollimgaes{
+        position: absolute;
+        margin-top: 99px;
+        width: 100%;
+    }
+    .scrollimgaes img{
+        width: 15%;
+        height: 50px;
+        margin-left: 10%;
+        overflow: hidden;
+    }
+    .lia{
+        width: 50%;
+        font-size: 20px;
+    }
+    section{
+        width: 100%;
+         margin-top:1370px ;
+    }
+    .share{
+        margin-left: -14%;
+    }
+}
